@@ -24,6 +24,7 @@
 #include <cainteoir/xmlreader.hpp>
 #include <sstream>
 #include <set>
+#include <functional>
 
 namespace cainteoir { namespace rdf
 {

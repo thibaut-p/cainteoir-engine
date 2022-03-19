@@ -331,7 +331,7 @@ ffmpeg_player::ffmpeg_player(const std::shared_ptr<cainteoir::buffer> &aData)
 	, mFrame(nullptr)
 {
 	static const int buffer_size = 32768;
-	uint8_t *buffer = (uint8_t *)av_malloc(buffer_size + FF_INPUT_BUFFER_PADDING_SIZE);
+	uint8_t *buffer = (uint8_t *)av_malloc(buffer_size + AV_INPUT_BUFFER_PADDING_SIZE);
 	mIO = avio_alloc_context(buffer, buffer_size, 0, mData.get(), read_buffer, nullptr, seek_buffer);
 
 	mFormat = avformat_alloc_context();
